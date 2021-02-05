@@ -1,31 +1,38 @@
-import React, {Component} from 'react';
-import {
-  Text,
-  View,
-  Button,
-} from 'react-native';
+import React from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import HomeScreen from './src/page/Home';
+import AboutScreen from './src/page/About';
+import LoginScreen from './src/page/Login';
+import RegisterScreen from './src/page/Register';
+import ListScreen from './src/page/List';
+import ProfileScreen from './src/page/Profile';
 
-export default class HomeScreen extends Component{
-  state = {
-    angka: 2,
-    margin: 5
-  };
-
-  componentDidMount(){
-    this.setState({angka: 89})
-  }
-
-  ubahAngka = () => {
-    this.setState({angka: 24, margin: 80})
-  }
-
+export default class App extends React.Component{
   render(){
-    return(
-      <View style={{textAlign: 'center', margin: this.state.margin, fontSize: 20}}>
-        <Text> Home </Text>
-        <Text onPress={this.ubahAngka}>{this.state.angka}</Text>
-        <Button title='Go to About' onPress={this.ubahAngka}/>
-      </View>
-    );
+    return <AppContainer /> 
   }
 }
+  const AppNavigator = createStackNavigator({
+    Home:{
+      screen: HomeScreen
+    },
+    About:{
+      screen: AboutScreen
+    },
+    Login:{
+      screen: LoginScreen
+    },
+    Register:{
+      screen: RegisterScreen
+    },
+    List:{
+      screen: ListScreen
+    },
+    Profile:{
+      screen: ProfileScreen
+    }
+  });
+
+  const AppContainer = createAppContainer(AppNavigator);
+
