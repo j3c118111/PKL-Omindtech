@@ -7,10 +7,13 @@ import LoginScreen from './src/page/Login';
 import RegisterScreen from './src/page/Register';
 import ListScreen from './src/page/List';
 import ProfileScreen from './src/page/Profile';
+import KaryawanMainScreen from './src/page/KaryawanMain';
+import KaryawanReadScreen from './src/page/KaryawanRead';
+import TokoScreen from './src/page/Toko';
 
 export default class App extends React.Component{
   render(){
-    return <AppContainer /> 
+  return <AppContainer />
   }
 }
   const AppNavigator = createStackNavigator({
@@ -31,6 +34,15 @@ export default class App extends React.Component{
     },
     Profile:{
       screen: ProfileScreen
+    },
+    KaryawanMain:{
+      screen: KaryawanMainScreen
+    },
+    KaryawanRead:{
+      screen: KaryawanReadScreen
+    },
+    Toko:{
+      screen: TokoScreen
     }
   });
 

@@ -86,6 +86,7 @@ export default class LoginScreen extends Component{
                 
                 <TouchableOpacity style = {styles.button} onPress={this.submit}>
                     <Text style = {styles.buttonText}>Sign In{this.props.type}</Text>
+                    
                 </TouchableOpacity>
                 <Button title="Register" onPress={()=>this.props.navigation.navigate('Register')}/> 
                 

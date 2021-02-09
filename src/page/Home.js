@@ -27,16 +27,18 @@ export default class HomeScreen extends Component{
         <Button title='Go to About' onPress={
             ()=>{this.props.navigation.navigate('About')}
             }/>   
-        <Text> 
-            Login akun
-        </Text>
+        <Text></Text>
         <Button style={{marginTop: 5}} title='Login' onPress={
             () => this.props.navigation.navigate('Login')
         } />   
-
+        <Text></Text>
         <Button style={{marginTop: 5}} title='List' onPress={()=>this.props.navigation.navigate('List')} />
-        
+        <Text></Text>        
         <Button style={{marginTop: 5}} title='Profile' onPress={()=>this.props.navigation.navigate('Profile')} />
+        <Text></Text>
+        <Button style={{marginTop: 5}} title='Karyawan' onPress={()=>this.props.navigation.navigate('KaryawanMain')} />
+        <Text></Text>
+        <Button style={{marginTop: 5}} title='Toko' onPress={()=>this.props.navigation.navigate('Toko')} />
       </View>
       
     );
