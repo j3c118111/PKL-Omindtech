@@ -1,6 +1,7 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import SplashScreen from 'react-native-splash-screen';
 import HomeScreen from './src/page/Home';
 import AboutScreen from './src/page/About';
 import LoginScreen from './src/page/Login';
@@ -16,6 +17,9 @@ import TokoScreen from './src/page/Toko';
 import DetailListTokoScreen from './src/page/DetailListToko';
 
 export default class App extends React.Component{
+  componentDidMount(){
+    SplashScreen.hide();
+  }
   render(){
   return <AppContainer />
   }
