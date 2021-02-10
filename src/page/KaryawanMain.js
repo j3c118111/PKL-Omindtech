@@ -141,7 +141,9 @@ export default class KaryawanMainScreen extends Component{
                     activeOpacity={0.4}
                     style={styles.TouchableOpacityStyle}
                     onPress={
-                        () => {this.InsertKaryawanRecordsToServer(); this.submit();}
+                        () => {this.InsertKaryawanRecordsToServer(); 
+                               this.submit();
+                              }
                     }
                     // onPress={this.submit}
                 >      

@@ -5,11 +5,15 @@ import HomeScreen from './src/page/Home';
 import AboutScreen from './src/page/About';
 import LoginScreen from './src/page/Login';
 import RegisterScreen from './src/page/Register';
-import ListScreen from './src/page/List';
+import ListProfileScreen from './src/page/ListProfile';
+import ListKaryawanScreen from './src/page/ListKaryawan';
+import ListTokoScreen from './src/page/ListToko';
 import ProfileScreen from './src/page/Profile';
 import KaryawanMainScreen from './src/page/KaryawanMain';
 import KaryawanReadScreen from './src/page/KaryawanRead';
+import DetailListKaryawanScreen from './src/page/DetailListKaryawan';
 import TokoScreen from './src/page/Toko';
+import DetailListTokoScreen from './src/page/DetailListToko';
 
 export default class App extends React.Component{
   render(){
@@ -29,11 +33,11 @@ export default class App extends React.Component{
     Register:{
       screen: RegisterScreen
     },
-    List:{
-      screen: ListScreen
-    },
     Profile:{
       screen: ProfileScreen
+    },
+    ListProfile:{
+      screen: ListProfileScreen
     },
     KaryawanMain:{
       screen: KaryawanMainScreen
@@ -41,8 +45,20 @@ export default class App extends React.Component{
     KaryawanRead:{
       screen: KaryawanReadScreen
     },
+    ListKaryawan:{
+      screen: ListKaryawanScreen
+    },
+    DetailListKaryawan:{
+      screen: DetailListKaryawanScreen
+    },
     Toko:{
       screen: TokoScreen
+    },
+    ListToko:{
+      screen: ListTokoScreen
+    },
+    DetailListToko:{
+      screen: DetailListTokoScreen
     }
   });
 
